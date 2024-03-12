@@ -22,8 +22,8 @@ class HomeController extends Controller
 //        Auth::logout();
 //        dd(Auth::user());
         $x = Auth::attempt(['email' => 'eng.mina23@gmail.com' , 'password' => '123123']);
-        return view('welcome');
-        dd(Auth::user());
+//        return view('welcome');
+//        dd(Auth::user());
         return Redirect::to('/mina');
     }
 
