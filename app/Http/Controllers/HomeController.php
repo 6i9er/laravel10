@@ -19,9 +19,11 @@ use Illuminate\Support\Facades\Validator;
 class HomeController extends Controller
 {
     public function test(){
-        Auth::logout();
-        dd(Auth::user());
+//        Auth::logout();
+//        dd(Auth::user());
         $x = Auth::attempt(['email' => 'eng.mina23@gmail.com' , 'password' => '123123']);
+        return view('welcome');
+        dd(Auth::user());
         return Redirect::to('/mina');
     }
 

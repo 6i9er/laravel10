@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        @if(env('APP_DEBUG'))
+
+            <link rel="stylesheet" href="{{ url('styles/debugbar.css') }}">
+        @endif
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -129,5 +133,10 @@
                 </div>
             </div>
         </div>
+
+        @if(env('APP_DEBUG'))
+
+            <script src="{{ url('scripts/debugbar.js') }}"></script>
+        @endif
     </body>
 </html>
