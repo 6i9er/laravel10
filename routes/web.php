@@ -13,9 +13,17 @@ use \App\Http\Controllers\HomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ]
+    , function()
+{
+    Route::get('/', [HomeController::class , 'test'] );
+    Route::get('/mina', [HomeController::class , 'test1'] );
+});
 
-Route::get('/', [HomeController::class , 'test'] );
-Route::get('/mina', [HomeController::class , 'test1'] );
 //Route::get('/', function () {
 //    return view('welcome');
 //});
