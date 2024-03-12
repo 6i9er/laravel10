@@ -12,7 +12,8 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "mcamara/laravel-localization": "^1.8"
+        "mcamara/laravel-localization": "^1.8",
+        "spatie/laravel-activitylog": "^4.8"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.12",
